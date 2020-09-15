@@ -18,7 +18,7 @@ signupForm.addEventListener("submit", (e) => {
       console.log('sign up');
     })
     .catch((error) => {
-      // Handle Errors here.
+      // Handle Errors 
       var errorCode = error.code;
       var errorMessage = error.message;
     });
@@ -44,7 +44,7 @@ signinForm.addEventListener("submit", (e) => {
       console.log('sign in');
     })
     .catch((error) => {
-      // Handle Errors here.
+      // Handle Errors 
       var errorCode = error.code;
       var errorMessage = error.message;
     });
