@@ -80,9 +80,11 @@
                   type="text"
                   id="signup-email"
                   class="form-control"
-                  placeholder="correo"
+                  placeholder="Email"
                   required
                 />
+              </div>
+              <div class="form-group">
                 <input
                   type="password"
                   id="signup-password"
@@ -91,9 +93,7 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-primary">
-                Sign Up
-              </button>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
             </form>
           </div>
         </div>
@@ -118,5 +118,30 @@
       crossorigin="anonymous"
     ></script>
     <!-- Script bootstrap End -->
+    <!-- Script FireBase start -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCNK-t2Exq6NfAXFa0Hf6ho284bm4namr0",
+        authDomain: "fb-example-47085.firebaseapp.com",
+        databaseURL: "https://fb-example-47085.firebaseio.com",
+        projectId: "fb-example-47085",
+        storageBucket: "fb-example-47085.appspot.com",
+        messagingSenderId: "1049799958298",
+        appId: "1:1049799958298:web:54c3dfc7a6fba08f8496a3",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Script Firebase End -->
+    <!-- My Code Start -->
+    <script src="./main.js"></script>
+    <!-- My Code End -->
   </body>
 </html>
