@@ -7,6 +7,14 @@ signupForm.addEventListener("submit", (e) => {
   const password = document.querySelector("#signup-password").value;
 
 
-  auth.
-    createUserWithEmailAndPassword(email, password)
+  auth
+    .createUserWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      // clean the form
+      signupForm.reset();
+      // close the modal
+      $('#signupmodal').modal('hide')
+      
+      console.log('signup');
+    })
 });
