@@ -180,7 +180,10 @@
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- FireBase Auth -->
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <!-- FireBase Cloud Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestone.js"></script>
 
     <script>
       // Your web app's Firebase configuration
@@ -193,11 +196,14 @@
         messagingSenderId: "1049799958298",
         appId: "1:1049799958298:web:54c3dfc7a6fba08f8496a3",
       };
+      
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       const auth = firebase.auth();
+      const fs = firebase.firestore();
     </script>
     <!-- Script Firebase End -->
+
     <!-- My Code Start -->
     <script src="./main.js"></script>
     <!-- My Code End -->
