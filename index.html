@@ -31,16 +31,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+              <a class="nav-link" href="#">SignIn</a>
+            </li>
+            <li class="nav-item">
               <a
                 class="nav-link"
                 href="#"
                 data-toggle="modal"
-                data-target="#signUpModal"
-                >SignIn</a
+                data-target="#signupmodal"
+                >SignUp</a
               >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SignUp</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">LogOut</a>
@@ -54,7 +54,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="signUpModal"
+      id="signupmodal"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
@@ -63,7 +63,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Registrate :D</h5>
             <button
               type="button"
               class="close"
@@ -73,16 +73,28 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-body">
+            <form id="signup-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="signup-email"
+                  class="form-control"
+                  placeholder="correo"
+                  required
+                />
+                <input
+                  type="password"
+                  id="signup-password"
+                  class="form-control"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Sign Up
+              </button>
+            </form>
           </div>
         </div>
       </div>
