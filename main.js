@@ -49,3 +49,16 @@ signinForm.addEventListener("submit", (e) => {
       var errorMessage = error.message;
     });
 });
+
+// logOut
+const logout = document.querySelector("#logout");
+
+logout.addEventListener('click', e => {
+  e.preventDefault();
+  auth.signOut().then(function() {
+    // Sign-out successful.
+    console.log('sign out');
+  }).catch(function(error) {
+    // An error happened.
+  });
+})
