@@ -1,16 +1,16 @@
 // Login Change
-const loggedOutLinks = document.querySelectorAll('.logged-out');
-const loggedInLinks = document.querySelectorAll('.logged-in');
+const loggedOutLinks = document.querySelectorAll(".logged-out");
+const loggedInLinks = document.querySelectorAll(".logged-in");
 
-const loginCheck = user => {
-  if(user){
-    loggedInLinks.forEach(link => link.getElementsByClassName.display = 'block')
-    loggedOutLinks.forEach(link => link.getElementsByClassName.display = 'none')
+const loginCheck = (user) => {
+  if (user) {
+    loggedInLinks.forEach((link) => (link.style.display = "block"));
+    loggedOutLinks.forEach((link) => (link.style.display = "none"));
   } else {
-    loggedInLinks.forEach(link => link.getElementsByClassName.display = 'none')
-    loggedOutLinks.forEach(link => link.getElementsByClassName.display = 'block')
+    loggedInLinks.forEach((link) => (link.style.display = "none"));
+    loggedOutLinks.forEach((link) => (link.style.display = "block"));
   }
-} 
+};
 
 // SignUp Event
 const signupForm = document.querySelector("#signup-form");
