@@ -63,6 +63,19 @@ logout.addEventListener('click', e => {
   });
 })
 
+// Google login
+const googleButton = document.querySelector('#googleLogin');
+googleButton.addEventListener('click', e => {
+  const provider = new firebase.auth.GoogleAuthProvider();
+  auth.signInWithPopup(provider)
+    .then(result => {
+      console.log('google signin');
+    })
+    .catch(err => {
+      console.log(err);
+    })
+})
+
 // Publicaciones post
 const postList = document.querySelector('.posts');
 
