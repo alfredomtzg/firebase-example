@@ -66,12 +66,36 @@ logout.addEventListener('click', e => {
 // Publicaciones post
 const postList = document.querySelector('.posts');
 
+const setupPost = data => {
+  if(data.length) {
+    let html = '';
+    data.forEach((doc) => {
+      const post = doc.data();
+      console.log(post);
+      const li = `
+        <li class="list-group-item list-group-item-action >
+          <h5> ${post.title} </h5>
+          <p>${post.description} </p>
+        </li>
+      `;
+      html = html + li;
+    });
+    postList.innerHTML = html;
+  } else {
+    postList.innerHTML = '<p class=" text-center"> Login to see Posts</p>'
+  }
+}
 
 // Events -> enlistar si está autenticado si no ocultalos
 auth.onAuthStateChanged(user => {
   if(user){
-    console.log('Está logiado sign in');
+    db.collection("posts")
+      .get()
+      .then((snapshot) => {
+        setupPost(snapshot.docs);
+      });
   } else {
     console.log('Te saliste sign out');
+    setupPost([]);
   }
 })
