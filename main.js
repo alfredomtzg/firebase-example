@@ -67,18 +67,17 @@ logout.addEventListener('click', e => {
 const postList = document.querySelector('.posts');
 
 const setupPost = data => {
-  if(data.length) {
+  if (data.length) {
     let html = '';
     data.forEach((doc) => {
       const post = doc.data();
-      console.log(post);
       const li = `
-        <li class="list-group-item list-group-item-action >
-          <h5> ${post.title} </h5>
-          <p>${post.description} </p>
-        </li>
-      `;
-      html = html + li;
+      <li class="list-group-item list-group-item-action">
+        <h5>${post.title}</h5>
+        <p>${post.description}</p>
+      </li>
+    `;
+      html += li;
     });
     postList.innerHTML = html;
   } else {
