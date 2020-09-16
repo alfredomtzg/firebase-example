@@ -50,15 +50,28 @@ signinForm.addEventListener("submit", (e) => {
     });
 });
 
-// logOut
+// logOut event
 const logout = document.querySelector("#logout");
 
 logout.addEventListener('click', e => {
   e.preventDefault();
-  auth.signOut().then(function() {
+  auth.signOut().then(function () {
     // Sign-out successful.
     console.log('sign out');
-  }).catch(function(error) {
+  }).catch(function (error) {
     // An error happened.
   });
+})
+
+// Publicaciones post
+const postList = document.querySelector('.posts');
+
+
+// Events -> enlistar si está autenticado si no ocultalos
+auth.onAuthStateChanged(user => {
+  if(user){
+    console.log('Está logiado sign in');
+  } else {
+    console.log('Te saliste sign out');
+  }
 })
