@@ -1,3 +1,17 @@
+// Login Change
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+const loggedInLinks = document.querySelectorAll('.logged-in');
+
+const loginCheck = user => {
+  if(user){
+    loggedInLinks.forEach(link => link.getElementsByClassName.display = 'block')
+    loggedOutLinks.forEach(link => link.getElementsByClassName.display = 'none')
+  } else {
+    loggedInLinks.forEach(link => link.getElementsByClassName.display = 'none')
+    loggedOutLinks.forEach(link => link.getElementsByClassName.display = 'block')
+  }
+} 
+
 // SignUp Event
 const signupForm = document.querySelector("#signup-form");
 
@@ -121,6 +135,7 @@ const setupPost = data => {
   }
 }
 
+
 // Events -> enlistar si está autenticado si no ocultalos
 auth.onAuthStateChanged(user => {
   if(user){
@@ -128,9 +143,11 @@ auth.onAuthStateChanged(user => {
       .get()
       .then((snapshot) => {
         setupPost(snapshot.docs);
+        loginCheck(user);
       });
   } else {
     console.log('Te saliste sign out');
     setupPost([]);
+    loginCheck(user)
   }
 })
