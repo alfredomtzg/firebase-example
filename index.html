@@ -30,7 +30,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li class="nav-item" style="display: none">
               <a
                 class="nav-link"
                 href="#"
@@ -39,7 +39,7 @@
                 >SignIn</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none">
               <a
                 class="nav-link"
                 href="#"
@@ -48,7 +48,7 @@
                 >SignUp</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display: none">
               <a class="nav-link" href="#" id="logout">LogOut</a>
             </li>
           </ul>
@@ -159,8 +159,23 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-secondary btn-block">Login</button>
-              <button type="button" class="btn btn-success btn-block" id="googleLogin">Login whit Google</button>
+              <button type="submit" class="btn btn-secondary btn-block">
+                Login
+              </button>
+              <button
+                type="button"
+                class="btn btn-success btn-block"
+                id="googleLogin"
+              >
+                Login whit Google
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary btn-block"
+                id="facebookLogin"
+              >
+                Login whit Facebook
+              </button>
             </form>
           </div>
         </div>

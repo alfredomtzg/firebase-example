@@ -69,11 +69,34 @@ googleButton.addEventListener('click', e => {
   const provider = new firebase.auth.GoogleAuthProvider();
   auth.signInWithPopup(provider)
     .then(result => {
-      console.log('google signin');
+      console.log('google sign in')
+      // clean the form
+      signupForm.reset();
+      // close the modal
+      $('#signinmodal').modal('hide')
     })
-    .catch(err => {
-      console.log(err);
+    .catch(error => {
+      console.log(error.message);
     })
+})
+
+// Facebook Login
+const facebookButton = document.querySelector('#facebookLogin')
+facebookButton.addEventListener('click', e => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  auth.signInWithPopup(provider)
+    .then(result => {
+      // clean the form
+      signupForm.reset();
+      // close the modal
+      $('#signinmodal').modal('hide')
+    })
+    .catch(error => {
+      console.log(error.message);
+      // clean the form
+      signupForm.reset();
+    })
+
 })
 
 // Publicaciones post
