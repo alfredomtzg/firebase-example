@@ -12,7 +12,7 @@ const loginCheck = (user) => {
   }
 };
 
-// SignUp Event
+// SignUp Event.
 const signupForm = document.querySelector("#signup-form");
 
 signupForm.addEventListener("submit", (e) => {
